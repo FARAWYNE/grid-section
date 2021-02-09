@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+a {
+    color: hsl(228, 45%, 44%);
+}
+
+.post-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-gap: 25px;
+    grid-template-areas:
+        "purple purple grey white"
+        "white-small dark-blue dark-blue white";
+    margin: 3% 12%;
+}
+
+.post {
+    box-shadow: 0 0 10px hsl(217, 19%, 35%, .1);
+    padding: 2rem;
+    border-radius: 10px;
+    background:white;
+    color: hsl(217, 19%, 35%);
+}
+
+.post-head-container {
+    display: flex;
+}
+
+.post-flex-text {
+    display: flex;
+    flex-flow: column;
+}
+
+.post-img {
+    width: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    margin: 0 1rem 1rem 0;
+}
+
+.post-tag {
+     opacity: 50%;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-body {
+    font-size: 13px;
+    line-height: 1.25rem;
+}
+
+.post-text-white {
+    color: white;
+}
+
+.grid-purple {
+    grid-area: purple;
+    background: hsl(263, 55%, 52%);
+}
+
+.grid-grey {
+    grid-area: grey;
+    background: hsl(217, 19%, 35%);
+}
+
+.grid-white {
+    grid-area: white;
+}
+
+.grid-white-small {
+    grid-area: white-small;
+}
+
+.grid-dark-blue {
+    grid-area: dark-blue;
+    background:hsl(219, 29%, 14%);
+}
+
+/* .back-btn {
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    color: black;
+    top: 1rem;
+    left: 1rem;
+    text-decoration: none;
+    z-index: 1;
+} */
+
+@media screen and (max-width: 1200px) {
+    .post-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "purple"
+        "grey"
+        "white"
+        "white-small"
+        "dark-blue";
+    }
+}
